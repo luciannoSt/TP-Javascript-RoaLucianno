@@ -23,7 +23,7 @@ while(c<1){
 }
 let total=cp*p;
 
-if(cp>10 || total>20000){
+if(cp>10 && total>20000){
     total=total*0.85;
     console.log("el total a pagar con descuento es: "+total);
 }
