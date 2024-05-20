@@ -28,13 +28,18 @@ function editarTarea(){
     let tarea;
     let nom=prompt("Ingrese el nombre de la tarea a editar: ");
     let nomspace=nom.trim();
-    if(lista.includes(nomspace)){
-        tarea=prompt("Ingrese el nuevo nombre de tarea: ");
-        lista.splice(lista.indexOf(nomspace),1,tarea);
-        alert("la tarea se edito correctamente.")
+    if(nomspace.length==0){
+        alert("La tarea esta vacia");
     }else{
-        alert("La tarea no existe");
+        if(lista.includes(nomspace)){
+            tarea=prompt("Ingrese el nuevo nombre de tarea: ");
+            lista.splice(lista.indexOf(nomspace),1,tarea);
+            alert("la tarea se edito correctamente.")
+        }else{
+            alert("La tarea no existe");
+        }
     }
+    
 }
 
 function eliminarTarea(){
