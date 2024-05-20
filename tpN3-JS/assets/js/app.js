@@ -37,15 +37,11 @@ function editarTarea(){
     }else{
         if(lista.includes(nomspace)){
             tarea=prompt("Ingrese el nuevo nombre de tarea: ");
-            if(tarea.length==0){
-                alert("La tarea esta vacia");
+            if(tarea.length==0 || lista.includes(tarea)){
+                alert("el nombre de tarea no es valido");
             }else{
-                if(lista.includes(tarea)){
-                    alert("La tarea ya existe");
-                }else{
-                    lista.splice(lista.indexOf(nomspace),1,tarea);
-                    alert("la tarea se edito correctamente.")
-                }
+                lista.splice(lista.indexOf(nomspace),1,tarea);
+                alert("la tarea se edito correctamente.")
             }
             
         }else{
