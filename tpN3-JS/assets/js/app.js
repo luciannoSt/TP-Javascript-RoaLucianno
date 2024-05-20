@@ -11,7 +11,7 @@ function agregarTarea(){
 function listarTareas(){
     let tareas="";
     if(lista.length==0){
-        tareas="No hay tareas";
+        alert("No hay tareas, agregue alguna por favor.");
     }else{
         for(let i=0;i<lista.length;i++){
             if(i==lista.length-1){
