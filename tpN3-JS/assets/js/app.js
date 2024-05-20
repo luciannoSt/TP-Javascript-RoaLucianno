@@ -4,8 +4,12 @@ function agregarTarea(){
     if(tareS.length==0){
         alert("La tarea esta vacia");
     }else{
+        if(lista.includes(tareS)){
+            alert("La tarea ya existe");
+        }else{
         lista.push(tareS);
         alert("La tarea se agrego correctamente.");
+        }
     }
 }
 function listarTareas(){
@@ -33,8 +37,12 @@ function editarTarea(){
     }else{
         if(lista.includes(nomspace)){
             tarea=prompt("Ingrese el nuevo nombre de tarea: ");
-            lista.splice(lista.indexOf(nomspace),1,tarea);
-            alert("la tarea se edito correctamente.")
+            if(lista.includes(tarea)){
+                alert("La tarea ya existe");
+            }else{
+                lista.splice(lista.indexOf(nomspace),1,tarea);
+                alert("la tarea se edito correctamente.")
+            }
         }else{
             alert("La tarea no existe");
         }
